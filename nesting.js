@@ -50,8 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
+const employeeUpdater = () => {
+  employees.filter((element, index, arr) => {
+    if (element.firstName === 'Theo') {
+      employees.splice(index, 1)
+    } else if (element.firstName === 'Lorie') {
+      element.department = 'HR'
+    }
+  })
+  return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +76,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(array) {
+  return array.sort().filter(function(item, position, arr) {
+    return !position || item != arr[position - 1];
+  })
+}
 
 
 
@@ -138,7 +150,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+let recordCleaner = () => {
+  myCar.accidents.forEach((element, index, array) => {
+    element.atFaultForAccident = false
+  })
+}
 
 
 
@@ -157,6 +173,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+let looper = () => {
+  let newArr = numsArr.map((element, index, array) => {
+    let holderArray=[]
+    element.map((element, index, array) => {
+      if(element % 2 === 0) {
+        holderArray.push('even')
+      } else {
+        holderArray.push('odd')
+      }
+    })
+    return holderArray
+  })
+  return newArray
+}
 
 
