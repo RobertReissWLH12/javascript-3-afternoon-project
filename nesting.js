@@ -109,8 +109,13 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+// const filteredActivities = cat.filter(function(element, index, array) {
+//   if(element.activities && element.activities[key] === 'e') {
+//     var grumpyActivity = element.activities[key]
+//   }
+// })
+// var grumpyActivity = cat.catFriends.activities[1];
+// var fluffy2ndFriend = cat.catFriends.activities[1];
 
 
 
