@@ -82,6 +82,20 @@ function removeDuplicates(array) {
   })
 }
 
+//PROBLEM 2 SOLVED WITH NESTED LOOPS//
+// let removeDuplicates = () => {
+//   for (i=0; i < workplaceAccidents.length; i++){
+//     for (j=i+1; j < workplaceAccidents.length; j++){
+//       if (workplaceAccidents[i] === workplaceAccidents[j]){
+//         workplaceAccidents.splice(j, 1)
+//         i=0;
+//         j=1;
+//       }
+//     }
+//   }
+//   return workplaceAccidents
+// }
+
 
 
 ////////// PROBLEM 3 //////////
@@ -109,13 +123,8 @@ var cat = {
 */
 
 //Code Here
-// const filteredActivities = cat.filter(function(element, index, array) {
-//   if(element.activities && element.activities[key] === 'e') {
-//     var grumpyActivity = element.activities[key]
-//   }
-// })
-// var grumpyActivity = cat.catFriends.activities[1];
-// var fluffy2ndFriend = cat.catFriends.activities[1];
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -179,7 +188,7 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 let looper = () => {
-  let newArr = numsArr.map((element, index, array) => {
+  let newArray = numsArr.map((element, index, array) => {
     let holderArray=[]
     element.map((element, index, array) => {
       if(element % 2 === 0) {
